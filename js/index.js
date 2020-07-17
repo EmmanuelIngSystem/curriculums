@@ -1,21 +1,3 @@
-/*
-rojo
-background: #C93D31;
-
-
-azul
-background: #598ED6;
-
-
-verde
-background: #18AD0F;
-
-
-negro
-background: #6C6A6A;
-
-*/
-
 function cambia_tema(elemento){
 	console.log("Elemento: ", elemento);
 	let color_tema = elemento.style.background;
@@ -66,5 +48,22 @@ function cambia_tema(elemento){
 	for (var i = 0; i < titulos_area_interes.length; i++) {
 		let titulo_area_interes = titulos_area_interes[i];
 		titulo_area_interes.style.color = color_tema;
+	}
+}
+
+function abrir_red_social(elemento){
+	let id_elemento = elemento.getAttribute("id");
+	let url = "";
+	switch(id_elemento){
+		case "youtube":
+			url = "https://www.youtube.com/channel/UCgWPvqscqkl7NplDU-mJ-uA";
+			window.open(url, '_blank');
+		break;
+		case "linkedin":
+			url = "https://www.linkedin.com/in/emmanuel-lagunas-evangelista-124494141/";
+			window.open(url, '_blank');
+		break;
+		default:
+		break;
 	}
 }

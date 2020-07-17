@@ -45,8 +45,8 @@
 		</section>
 		<section class="redes_sociales">
 			<ul>				
-				<li>Youtube</li>
-				<li>Linkedin</li>
+				<li id="youtube" onclick="abrir_red_social(this)">Youtube</li>
+				<li id="linkedin" onclick="abrir_red_social(this)">Linkedin</li>
 			</ul>
 		</section>
 		<section class="informacion">
@@ -71,7 +71,7 @@
 						<li>Framework Codeigniter</li>
 						<li>HTML, CSS</li>
 						<li>Javascript, Jquery</li>
-						<li>ANgular</li>
+						<li>Angular</li>
 						<li>Nodejs</li>
 					</ul>
 					<h4 class="subtitulo_info">Soft skills</h4>
@@ -110,7 +110,7 @@
 						</p>
 						<p>
 							<span class="fa fa-angle-double-right"></span>
-							Modulo para graficar las vivendas vendidas y compradas</p>
+							Modulo para graficar las viviendas vendidas y compradas</p>
 						<p>
 							<span class="fa fa-angle-double-right"></span>
 							Implementar diseño responsivo
