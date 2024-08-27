@@ -1,5 +1,5 @@
-var containe_op = new Vue({
-    el: '#container-op',
+new Vue({
+    el: '#container-characters',
     data () {
         return {
             info: null,
@@ -7,16 +7,11 @@ var containe_op = new Vue({
             loading: true
         }
     },
-    methods: {
-        openPage: function (data) {
-            window.open(data, '_blank');
-        }
-    },
     mounted() {
         axios
-            .get('data_local/data_index.json')
+            .get('https://api.api-onepiece.com/v2/characters/en')
             .then(response => {
-                console.log("index")
+                console.log("characters")
                 console.log(response.data)
                 this.info = response.data
             })
@@ -25,8 +20,6 @@ var containe_op = new Vue({
                 console.error(error)
                 this.errored = true
             })
-            .finally(()=> {
-                setTimeout( ()=> this.loading = false, 1800 );
-            })
+            .finally(()=> this.loading = false)
     }
 });

@@ -11,14 +11,15 @@
     <link rel="stylesheet" href="css/format.css">
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/loader.css">
+    <link rel="stylesheet" href="css/dials.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-    <title>API One Piece</title>
+    <title>Dials</title>
 </head>
 <body>
-    <h1 class="title">One Piece</h1>
-    <section id="container-op" class="container-main">
+    <h1 class="title">Dials</h1>
+    <section id="container-dials">
         <!-- loader -->
         <div id="loading-animation" class="heading large-text" v-if="loading">
             <p>l</p><p>o</p><p>a</p><p>d</p><p>i</p><p>n</p><p>g</p>
@@ -28,15 +29,11 @@
             <p>Lo sentimos, no es posible obtener la información en este momento, por favor intente nuevamente mas tarde</p>
         </section>
         <div v-if="loading">Cargando...</div>
-        <section v-else v-for="cardOp in info" class="card" v-on:click="openPage(cardOp.page)">
-            <section class="card-image">
-                <img :src="cardOp.image" alt="imagen 1">
-            </section>
-            <section class="card-title">
-                <p>{{ cardOp.tittle }}</p>
-            </section>
+        <section v-else v-for="cardDial in info" class="column-dial">
+            <h3 class="name">{{ cardDial.name }}</h3>
+            <p class="type"> <label for="type-dial">Type: </label><span>{{ cardDial.type }}</span></p>
         </section>
     </section>
-    <script src="js/index.js"></script>
+    <script src="js/dials.js"></script>
 </body>
 </html>

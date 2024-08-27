@@ -1,238 +1,44 @@
-*{
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-}
-
 body{
-	background: rgba(220, 220, 220, 0.9);
+    background: #dbe4ed;
 }
 
-.cabecera_cv{
-	position: fixed;
-	top: 0;
-	width: 100%;
-	background: #598ED6;
+h1.title{
+    text-align: center;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: bolder;
+    font-style: normal;
+    font-size: 50px;
+    background-image: linear-gradient(to right top, #dbe4ed, #b2c8d8, #86adc3, #5593ac, #007a94);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
-.colores_cabecera_cv{
-	width: 20%;
-	margin: 1% 0% 1% 80%;
-	display: grid;
-	grid-template-columns: 25% 25% 25% 25%;
-	list-style: none;
+section.container-main{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 30px;
+    margin: 25px;
 }
 
-.circulo_color_cabecera_cv{
-	border: 2px solid white;
-	border-radius: 50%;
-	width: 2rem;
-    height: 2rem;
-    padding: 0;
+section.container-main section.card{
+    padding: 25px 25px;
+    cursor: pointer;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
 }
 
-.circulo_color_cabecera_cv{
-	cursor: pointer;
+section.container-main section.card:hover{
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
 
-.nombre_cabecera_cv{
-	width: 60%;
-	margin: 0% 0% 0% 15%;
-	padding: 1% 0% 2% 0%;
-	display: grid;
-	grid-template-columns: 100%;
-	list-style: none;
-	font-family: 'Francois One', sans-serif;
-	color: #fff;
-	font-size: 2vw;
-	text-transform: uppercase;
+section.container-main section.card section.card-image img{
+    display: block;
+    margin: auto;
+    width: 115px;
+    height: 115px;
 }
 
-.contenedor_general_cv{
-	width: 60%;
-	margin: auto;
-	margin-top: 10%;
-	padding: 1% 0% 2% 0%;
-	color: #000;
+section.container-main section.card section.card-title p{
+    text-align: center;
+    padding: 15px 15px;
 }
-
-.profesion{
-	width: 20%;
-	border-right: 2px solid #000;
-	margin-top: 1%;
-	padding: 0% 1% 0% 1%;
-	font-size: 1.2vw;
-	font-family: 'Inconsolata', monospace;
-}
-
-.redes_sociales{
-	width: 30%;
-	margin: 2% 1% 2% 1%;
-	font-family: 'Inconsolata', monospace;
-}
-
-.redes_sociales ul{
-	display: grid;
-	grid-template-columns: 48% 48%;
-	grid-gap: 4%;
-	list-style: none;
-}
-
-.redes_sociales ul li{
-	width: 100%;
-	background: #8CB3E7;
-	border-radius: 5px;
-	color: #444;
-	font-size: 1.1vw;
-	text-align: center;
-	padding: 5% 0% 5% 0%;
-}
-
-.redes_sociales ul li:hover{
-	cursor: pointer;
-	color: #fff;
-    -webkit-transition: color 300ms linear;
-    -ms-transition: color 300ms linear;
-    transition: color 300ms linear;
-    background-color: #598ED6;
-    -webkit-transition: background-color 300ms linear;
-    -ms-transition: background-color 300ms linear;
-    transition: background-color 300ms linear;
-}
-
-.informacion{
-	width: 100%;
-	margin: 2% 1% 2% 1%;
-	display: grid;
-	grid-template-columns: 35% 60%;
-	grid-gap: 4%;
-}
-
-.info_aside ul, .descripcion ul{
-	list-style: none;
-	width: 100%;
-}
-
-.info_aside ul li, .descripcion ul li{
-	font-size: 1.1vw;
-	font-family: 'Inconsolata', monospace;
-}
-
-ul.lista_contacto li:hover{
-	cursor: pointer;
-	background: #C0C0C0;
-}
-
-ul.skills{
-	font-family: 'Inconsolata', monospace;
-}
-
-ul.educacion{
-	font-family: 'Inconsolata', monospace;
-}
-
-ul.area_interes_lista{
-	font-family: 'Inconsolata', monospace;
-}
-
-.info_aside ul li, .descripcion ul li{
-	padding: 3% 0% 3% 0%;
-}
-
-.info_aside ul li span.fa, .descripcion ul li span.fa{
-	padding: 0% 3% 0% 3%;
-}
-
-.titulo_info, .subtitulo_info{
-	color: #598ED6;
-	font-family: 'Francois One', sans-serif;
-	font-size: 1.5vw;
-	margin: 4% 0% 4% 0%;
-}
-
-.subtitulo_info{
-	font-family: 'Francois One', sans-serif;
-	font-size: 1.1vw;
-	color: #A0A0A0;
-}
-
-.titulo_educacion{
-	font-weight: bolder;
-	font-size: 1.2vw;
-}
-
-.fecha_educacion{
-	color: #A8A8A8;
-	font-size: 1vw;
-}
-
-.titulo_experiencia_sup{
-	color: #598ED6;
-	font-family: 'Francois One', sans-serif;
-	font-size: 1.5vw;
-	margin: 1% 0% 2% 0%;
-}
-
-.titulo_experiencia, .fecha_experiencia{
-	padding: 1% !important;
-	border-bottom: 1px solid #598ED6;
-}
-
-.titulo_experiencia{
-	margin: 1% 0% 0% 0%;
-	font-size: 1.1vw;
-	font-weight: bolder;
-}
-
-.fecha_experiencia{
-	color: #A8A8A8;
-	font-weight: bolder;
-}
-
-.descripcion ul li p{
-	padding: 0.5% 0% 0.5% 0%;
-	font-size: 1.1vw;
-}
-
-.fa-circle{
-	font-size: 0.6vw;
-}
-
-.area_interes{
-	width: 100%;
-	display: grid;
-	grid-template-columns: 35% 60%;
-	grid-gap: 4%;
-	align-items: center;
-	margin: 2% 1% 2% 1%;
-}
-
-.titulo_area_interes{
-    font-family: 'Francois One', sans-serif;
-	font-size: 1.1vw;
-	color: #598ED6;
-}
-
-.area_interes ul{
-	list-style: none;
-}
-
-.area_interes ul li{
-	padding: 1% 0% 1% 0%;
-	font-size: 1.1vw;
-}
-
-/* media querys */
-@media screen and (max-width: 900px){
-	.circulo_color_cabecera_cv {
-		display: inline-block;
-		width: 1rem;
-		height: 1rem;
-	}
-
-	.contenedor_general_cv{
-		width: 90%;
-		margin-top: 20%;
-	}
-}
-/* media querys */
